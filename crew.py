@@ -70,6 +70,7 @@ while True:
                        if sayac >= 5000:
                             print(Fore.RED + "[CREWGEDDON-DDOS]: The attack stoped.")
                             break
+      # Will continue from here.
       elif select == "11":
             print(Fore.RED + "[CREWGEDDON]: Exiting...")
             os.system("exit")
