@@ -1,6 +1,4 @@
-# 🚀 Yakında Sizlerle! | Coming Soon!
-
-## 📌 Proje Hakkında | About the Project
+# 📌 Proje Hakkında | About the Project
 **Crewgeddon**, kolay kurulum ve hızlı kullanım hedefiyle geliştirilen bir projedir.  
 Kurulum adımlarını aşağıdan takip edebilirsiniz.
 
