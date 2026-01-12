@@ -35,7 +35,16 @@ To run this project, you need the following:
 
 ---
 
-## 🛠️ Features
+# 📝 Start
+```fix
+git clone https://github.com/crewcik/crewgeddon.git
+```
+
+```fix
+python crew.py
+```
+
+# 🛠️ Features
 
 Crewgeddon includes various tools covering different cybersecurity domains:
 
