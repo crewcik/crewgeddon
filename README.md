@@ -1,6 +1,4 @@
-<center>
-  # <a href="https://geddon.crewdev.com.tr/">Web Sites</a>
-</center>
+<a href="https://geddon.crewdev.com.tr/">Web Sites</a>
 ---
 <p align="center">
   <a href="https://discord.com/users/1109430588714254439">
