@@ -1,5 +1,3 @@
-<a href="https://geddon.crewdev.com.tr/">Web Sites</a>
----
 <p align="center">
   <a href="https://discord.com/users/1109430588714254439">
     <img src="https://i.hizliresim.com/9lgkgzp.png" alt="Crewgeddon" />
@@ -9,35 +7,36 @@
 <h1 align="center">Crewgeddon</h1>
 
 <p align="center">
-  Educational Cyber Security Toolkit by <strong>Crew</strong>
+  <strong>Crew</strong> tarafından geliştirilen Eğitim Amaçlı Siber Güvenlik Aracı
 </p>
 
 ---
 
-## 📌 Project Overview
+## 📌 Proje Hakkında
 
-**Crewgeddon** is an open-source project developed by Turkish software developers **Crew**, created entirely for **educational purposes and cybersecurity awareness**.  
-The project is designed to be used in security testing and learning environments.
+**Crewgeddon**, Türk yazılım geliştiricilerden oluşan **Crew** ekibi tarafından geliştirilmiş, tamamen **eğitim ve siber güvenlik farkındalığı** amacıyla oluşturulmuş açık kaynaklı bir projedir.
+Proje, güvenlik testleri yapmak ve siber güvenlik alanında öğrenme sürecini desteklemek için tasarlanmıştır.
 
-> ⚠️ **Disclaimer:**  
-> This project is intended for **educational purposes only**.  
-> Any illegal use is strictly prohibited, and the developers are not responsible for misuse.
-
----
-
-## ⚙️ Requirements
-
-To run this project, you need the following:
-
-- **Python** 3.8 or higher  
-- **Git**
-- **Pip**
-- **Wi-Fi Adapter** (must support Monitor Mode)
-- **Linux-based Operating System** (recommended)
+> ⚠️ **Sorumluluk Reddi:**
+> Bu proje yalnızca **eğitim amaçlıdır**.
+> Yasa dışı kullanım kesinlikle yasaktır ve geliştiriciler kötüye kullanım durumlarından sorumlu değildir.
 
 ---
 
-# 📝 Start
+## ⚙️ Gereksinimler
+
+Projeyi çalıştırabilmek için aşağıdaki yazılımlara ihtiyacınız vardır:
+
+* **Python** 3.8 veya üzeri
+* **Git**
+* **Pip**
+* **Wi-Fi Adaptörü** (Monitor Mode desteklemelidir)
+* **Linux Tabanlı İşletim Sistemi** (önerilir)
+
+---
+
+# 📝 Başlatma
+
 ```fix
 git clone https://github.com/crewcik/crewgeddon.git
 ```
@@ -46,36 +45,48 @@ git clone https://github.com/crewcik/crewgeddon.git
 python crew.py
 ```
 
-# 🛠️ Features
+---
 
-Crewgeddon includes various tools covering different cybersecurity domains:
+# 🛠️ Özellikler
+
+Crewgeddon, siber güvenliğin farklı alanlarını kapsayan çeşitli araçlar içerir:
 
 ```text
-• Wi-Fi Security & Attack Tools
-• Keylogger Modules
-• RAT (Remote Access Trojan) Tools
-• DDoS Attack Modules
-• Website Attack & Testing Tools
-````
+• Wi-Fi Güvenliği ve Saldırı Araçları
+• Keylogger Modülleri
+• RAT (Uzaktan Erişim Aracı) Araçları
+• DDoS Saldırı Modülleri
+• Web Sitesi Saldırı ve Test Araçları
+```
 
-# 🐧 Platform Recommendation
-This project is developed for Linux environments.
-Some features may be limited or completely non-functional on Windows systems.
+---
 
-Recommended Distributions:
-Kali Linux
+# 🐧 Platform Önerisi
 
-Parrot OS
+Bu proje **Linux ortamları için geliştirilmiştir**.
+Windows sistemlerde bazı özellikler **sınırlı çalışabilir veya hiç çalışmayabilir**.
 
-Ubuntu (with required configurations)
+Önerilen Dağıtımlar:
 
-# 🤝 Contributing
-Crewgeddon is a fully open-source project.
-Developers who wish to contribute can submit pull requests or open issues.
+* Kali Linux
+* Parrot OS
+* Ubuntu (gerekli yapılandırmalar ile)
 
-# 📬 Contact
-For community and communication:
+---
+
+# 🤝 Katkıda Bulunma
+
+Crewgeddon tamamen **açık kaynaklı** bir projedir.
+Projeye katkıda bulunmak isteyen geliştiriciler **Pull Request** gönderebilir veya **Issue** açabilirler.
+
+---
+
+# 📬 İletişim
+
+Topluluk ve iletişim için:
 
 Discord: **crew.dev**
 
-<p align="center">Made with ❤️ by <strong>Crew</strong></p>
+---
+
+<p align="center">❤️ <strong>Crew</strong></p>
