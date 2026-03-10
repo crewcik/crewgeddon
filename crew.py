@@ -51,9 +51,9 @@ while True:
               with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                   s.settimeout(0.5)
                   if s.connect_ex((host, p)) == 0:
-                      print(Fore.GREEN + f"[CREWGEDDON]-[{host}]: OPEN: {p}")
+                      print(Fore.GREEN + f"[CREWGEDDON]-[{host}]: Açık: {p}")
                   else:
-                      print(Fore.RED + f"[CREWGEDDON]-[{host}]: CLOSED: {p}")
+                      print(Fore.RED + f"[CREWGEDDON]-[{host}]: Kapalı: {p}")
 
 
       elif select == "2":
