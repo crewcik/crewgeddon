@@ -4,17 +4,17 @@ from colorama import Fore
 import os
 import time
 
-import port_taramasi
-import ip_bulucu
-import ddos_sistem
-import mainText
-import mySql
-import altAlanAdiBulucu
-import trojen_sistem
-import keyLogger_sistem
-import wifi_hack
-import zaafiyetBulucu
-import yerelAgSaldirisi
+import modules.port_taramasi as port_taramasi
+import modules.ip_bulucu as ip_bulucu
+import modules.ddos_sistem as ddos_sistem
+import modules.mainText as mainText
+import modules.mySql as mySql
+import modules.altAlanAdiBulucu as altAlanAdiBulucu
+import modules.trojen_sistem as trojen_sistem
+import modules.keyLogger_sistem as keyLogger_sistem
+import modules.wifi_hack as wifi_hack
+import modules.zaafiyetBulucu as zaafiyetBulucu
+import modules.yerelAgSaldirisi as yerelAgSaldirisi
 
 import subprocess
 
